@@ -57,7 +57,7 @@ public class DariaMultiAutoCompleteTextview extends androidx.appcompat.widget.Ap
         counterPaint.setColor(Color.RED);
         counterPaint.setStyle(Paint.Style.FILL);
         counterPaint.setTextSize(typedArray.getInt(R.styleable.DariaMultiAutoCompleteTextview_daria_counter_size, 40));
-        counterPaint.setTextAlign(Paint.Align.CENTER);
+        counterPaint.setTextAlign(Paint.Align.RIGHT);
     }
 
     @Override
@@ -71,8 +71,8 @@ public class DariaMultiAutoCompleteTextview extends androidx.appcompat.widget.Ap
         this.canvas = canvas;
         setPadding(PADDING, PADDING, PADDING, PADDING);
         canvas.drawRoundRect(MARGIN, MARGIN, getWidth() - MARGIN, getHeight() - MARGIN, RADIUS, RADIUS, backgroundPaint);
-        if (typedArray.getBoolean(R.styleable.DariaMultiAutoCompleteTextview_daria_counter_visibility,false)) {
-            canvas.drawText(count + "", 29 * (getWidth() / 30), 5 * (getHeight() / 6) - 10, counterPaint);
+        if (typedArray.getBoolean(R.styleable.DariaMultiAutoCompleteTextview_daria_counter_visibility, false)) {
+            canvas.drawText(count + "", getWidth() - (MARGIN + PADDING), getHeight() - (PADDING), counterPaint);
             invalidate();
         }
     }
