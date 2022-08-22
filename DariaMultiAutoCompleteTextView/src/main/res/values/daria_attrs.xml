@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DariaMultiAutoCompleteTextview">
+        <attr name="daria_border_color" format="color"/>
+        <attr name="daria_counter_size" format="integer"/>
+        <attr name="daria_counter_visibility" format="boolean"/>
+        <attr name="daria_border_visibility" format="boolean"/>
+    </declare-styleable>
+</resources>
